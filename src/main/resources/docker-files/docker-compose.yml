@@ -1,0 +1,16 @@
+version: '3'
+services:
+  mongodb:
+    image: "mongo:4.2.3"
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - "mongo-data:${MONGODB_DATA_FOLDER}"
+    environment:
+      - MONGO_INITDB_DATABASE=orchestrator
+      - MONGO_INITDB_ROOT_USERNAME=orchestrator-admin
+      - MONGO_INITDB_ROOT_PASSWORD=movements
+
+volumes:
+  mongo-data:

@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+      database: orchestrator
+      host: localhost
+      password: movements
+      port: 27017
+      username: 'orchestrator-admin'
